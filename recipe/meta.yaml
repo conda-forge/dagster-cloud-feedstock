@@ -1,5 +1,6 @@
+{% set min_python = "python >=3.8,<3.13" %}
 {% set name = "dagster-cloud" %}
-{% set version = "1.9.3" %}
+{% set version = "1.9.6" %}
 {% set min_python = "python >=3.8,<3.13" %}
 
 package:
@@ -7,8 +8,8 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 486fb033a67ee3e1cd4e83b45fc06588b2bca1f0f11841a853b8f9b6c067cd64
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: 8b5791c8ed989c2daa5c8979c1c06fc5c51539b5c7dab0efc4a7662d5874b590
 
 build:
   noarch: python
@@ -18,11 +19,11 @@ build:
 
 requirements:
   host:
-    - {{ min_python }} 
+    - {{ min_python }}
     - pip
     - setuptools
   run:
-    - {{ min_python }} 
+    - {{ min_python }}
     - dagster =={{ version }}
     - dagster-cloud-cli =={{ version }}
     - pex >=2.1.132,<3
