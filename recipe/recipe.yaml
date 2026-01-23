@@ -3,7 +3,7 @@ schema_version: 1
 context:
   python_min: '3.10'
   name: dagster-cloud
-  version: "1.12.11"
+  version: "1.12.12"
 
 package:
   name: ${{ name|lower }}
@@ -11,7 +11,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name | replace('-', '_') }}-${{ version }}.tar.gz
-  sha256: 8d712fc0597dea9481b7480f64c8740422a4a8f5704163981fabd41f707d9378
+  sha256: 99e9fbd6f7396bdf6070cb0de932c767449a51488fdb6ce4be59b006b0e53e12
 
 build:
   number: 0
